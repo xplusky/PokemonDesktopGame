@@ -1,0 +1,15 @@
+﻿<Window x:Class="PokemonDesktopGame.DebugWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="DebugWindow" Height="354" Width="399">
+    <Grid>
+        <ListBox HorizontalAlignment="Stretch" Name="listboxContent" VerticalAlignment="Stretch">
+            <ListBoxItem Content="CurPoint" />
+            <ListBoxItem Content="Num" />
+            <ListBoxItem Content="None" />
+            <ListBoxItem Content="None" />
+            <ListBoxItem Content="None" />
+            <ListBoxItem Content="None" />
+        </ListBox>
+    </Grid>
+</Window>

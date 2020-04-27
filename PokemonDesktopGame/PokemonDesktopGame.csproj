@@ -1,0 +1,631 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{44325A85-CCA3-4CF6-9F93-721CFABE3939}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>PokemonDesktopGame</RootNamespace>
+    <AssemblyName>PokemonDesktopGame</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Res\Images\Icon\PokemonIcon.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="Class\Common.cs" />
+    <Compile Include="Class\FlyOut.cs" />
+    <Compile Include="DebugWindow.xaml.cs">
+      <DependentUpon>DebugWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="SettingWindow.xaml.cs">
+      <DependentUpon>SettingWindow.xaml</DependentUpon>
+    </Compile>
+    <Page Include="AboutWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="DebugWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="AboutWindow.xaml.cs">
+      <DependentUpon>AboutWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Page Include="SettingWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Res\Sound\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Res\Images\Pokemon\pokemon %281%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %2810%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %28100%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %28101%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %28102%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %28103%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %28104%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %28105%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %28106%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %28107%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %28108%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %28109%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %2811%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %28110%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %28111%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %28112%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %28113%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %28114%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %28115%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %28116%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %28117%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %28118%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %28119%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %2812%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %28120%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %28121%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %28122%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %28123%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %28124%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %28125%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %28126%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %28127%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %28128%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %28129%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %2813%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %28130%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %28131%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %28132%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %28133%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %28134%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %28135%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %28136%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %28137%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %28138%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %28139%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %2814%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %28140%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %28141%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %28142%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %28143%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %28144%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %28145%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %28146%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %28147%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %28148%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %28149%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %2815%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %28150%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %28151%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %28152%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %28153%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %28154%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %28155%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %28156%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %28157%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %28158%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %28159%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %2816%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %28160%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %28161%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %28162%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %28163%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %28164%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %28165%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %28166%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %28167%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %28168%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %28169%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %2817%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %28170%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %28171%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %28172%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %28173%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %28174%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %28175%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %28176%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %28177%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %28178%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %28179%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %2818%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %28180%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %28181%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %28182%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %28183%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %28184%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %28185%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %28186%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %28187%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %28188%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %28189%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %2819%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %28190%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %28191%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %28192%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %28193%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %28194%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %28195%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %28196%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %28197%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %28198%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %28199%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %282%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %2820%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %28200%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %28201%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %28202%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %28203%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %28204%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %28205%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %28206%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %28207%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %28208%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %28209%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %2821%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %28210%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %28211%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %28212%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %28213%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %28214%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %28215%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %28216%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %28217%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %28218%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %28219%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %2822%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %28220%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %28221%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %28222%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %28223%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %28224%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %28225%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %28226%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %28227%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %28228%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %28229%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %2823%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %28230%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %28231%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %28232%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %28233%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %28234%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %28235%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %28236%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %28237%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %28238%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %28239%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %2824%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %28240%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %28241%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %28242%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %28243%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %28244%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %28245%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %28246%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %28247%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %28248%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %28249%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %2825%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %28250%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %28251%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %28252%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %28253%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %28254%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %28255%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %28256%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %28257%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %28258%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %28259%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %2826%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %28260%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %28261%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %28262%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %28263%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %28264%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %28265%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %28266%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %28267%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %28268%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %28269%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %2827%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %28270%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %28271%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %28272%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %28273%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %28274%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %28275%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %28276%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %28277%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %28278%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %28279%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %2828%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %28280%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %28281%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %28282%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %28283%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %28284%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %28285%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %28286%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %28287%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %28288%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %28289%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %2829%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %28290%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %28291%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %28292%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %28293%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %28294%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %28295%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %28296%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %28297%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %28298%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %28299%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %283%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %2830%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %28300%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %28301%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %28302%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %28303%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %28304%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %28305%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %28306%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %28307%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %28308%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %28309%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %2831%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %28310%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %28311%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %28312%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %28313%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %28314%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %28315%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %28316%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %28317%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %28318%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %28319%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %2832%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %28320%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %28321%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %28322%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %28323%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %28324%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %28325%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %28326%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %28327%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %28328%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %28329%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %2833%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %28330%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %28331%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %28332%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %28333%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %28334%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %28335%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %28336%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %28337%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %28338%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %28339%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %2834%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %28340%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %28341%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %28342%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %28343%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %28344%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %28345%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %28346%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %28347%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %28348%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %28349%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %2835%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %28350%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %28351%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %28352%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %28353%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %28354%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %28355%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %28356%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %28357%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %28358%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %28359%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %2836%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %28360%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %28361%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %28362%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %28363%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %28364%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %28365%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %28366%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %28367%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %28368%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %28369%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %2837%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %28370%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %28371%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %28372%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %28373%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %28374%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %28375%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %28376%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %28377%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %28378%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %28379%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %2838%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %28380%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %28381%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %28382%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %28383%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %28384%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %28385%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %28386%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %28387%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %28388%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %28389%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %2839%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %28390%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %28391%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %28392%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %28393%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %28394%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %28395%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %28396%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %28397%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %28398%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %28399%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %284%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %2840%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %28400%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %28401%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %28402%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %28403%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %28404%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %28405%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %28406%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %28407%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %28408%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %28409%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %2841%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %28410%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %28411%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %28412%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %28413%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %28414%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %28415%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %28416%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %28417%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %28418%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %28419%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %2842%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %28420%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %28421%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %28422%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %28423%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %28424%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %28425%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %28426%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %28427%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %28428%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %28429%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %2843%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %28430%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %28431%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %28432%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %28433%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %28434%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %28435%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %28436%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %28437%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %28438%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %28439%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %2844%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %28440%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %28441%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %28442%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %28443%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %28444%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %28445%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %28446%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %28447%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %28448%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %28449%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %2845%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %28450%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %28451%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %28452%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %28453%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %28454%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %28455%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %28456%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %28457%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %28458%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %28459%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %2846%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %28460%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %28461%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %28462%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %28463%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %28464%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %28465%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %28466%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %28467%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %28468%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %28469%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %2847%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %28470%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %28471%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %28472%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %28473%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %28474%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %28475%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %28476%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %28477%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %28478%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %28479%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %2848%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %28480%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %28481%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %28482%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %28483%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %28484%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %28485%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %28486%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %28487%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %2849%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %285%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %2850%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %2851%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %2852%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %2853%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %2854%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %2855%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %2856%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %2857%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %2858%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %2859%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %286%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %2860%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %2861%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %2862%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %2863%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %2864%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %2865%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %2866%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %2867%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %2868%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %2869%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %287%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %2870%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %2871%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %2872%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %2873%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %2874%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %2875%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %2876%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %2877%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %2878%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %2879%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %288%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %2880%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %2881%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %2882%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %2883%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %2884%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %2885%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %2886%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %2887%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %2888%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %2889%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %289%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %2890%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %2891%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %2892%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %2893%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %2894%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %2895%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %2896%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %2897%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %2898%29.png" />
+    <Resource Include="Res\Images\Pokemon\pokemon %2899%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Res\Images\Test\TestObject.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cut1.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Res\Images\Effect\Cut1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Res\Images\Icon\PokemonIcon.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Res\Images\Effect\ComboHigh1BG.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
